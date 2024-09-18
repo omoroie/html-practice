@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+    <body>
+
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var coworkers = {
+        "program":"prop",
+        "design":"indesig"
+        };
+
+        document.write("program : "+coworkers.program+"<br>");
+        document.write("design : "+coworkers.design+"<br>");
+        coworkers.book = "helper";                                              // 배열에 새로운 내용을 추가 할 수 있다
+        document.write("book : "+coworkers.book+"<br>");
+        coworkers["data scientist"] = "parameter";                              // 띄어쓰기를 사용하는 예문
+        document.write("data scientist : "+coworkers["data scientist"]+"<br>"); // 가져올때도 똑같이 대괄호를 사용하여야 한다
+    </script>
+    <h2>Iterate</h2>
+    <script>
+        for(var key in coworkers){              // coworkers의 key 값을 가져오는 반복문
+            document.write(key +' : '+ coworkers[key]+'<br>');
+        }
+    </script>
+
+    <h2>Property & Method</h2>
+    <script>
+        coworkers.showAll = function(){          // == function showAll(){}
+            for(var key in this){              
+                document.write(key +' : '+ this[key]+'<br>');
+        }
+    }
+    coworkers.showAll();
+    </script>
+    </body>
+</html>
