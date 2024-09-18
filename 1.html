@@ -8,12 +8,18 @@
     <!-- <title>을 설정하여 웹페이지의 이름을 설정할 수 있다 -->
 <meta charset="utf-8">
     <!--charset 속성: 문서의 문자 인코딩을 지정합니다. 일반적으로 UTF-8을 사용함 -->
+
+    <script src="colors.js" defer></script> 
+    <!-- 자바스크립트 파일이 비동기로 로드되고, HTML 파싱이 완료된 후 실행됨. 실행 순서가 보장되며, 성능 최적화에 적합하다 -->
+    <!-- 비동기란 하나의 작업을 기다리지 않고 다른 작업을 병렬로 처리하는것을 말한다, async와 defer문이 있음 -->
+
 </head> 
     
 
 <body> 
     <h1><a href="index.html">WEB</a></h1>
     <!--<body> 태그는 HTML 문서의 본문이라 볼 수 있다. 사용자가 브라우저를 통해 직접 보는 내용은 모두 <body> 태그 내에 포함된다 -->
+    <input type="button" value="night" onclick="nightDayHandler(this)">
 <ol>
     <li><a href="1.html">HTML</a></li>
     <li><a href="2.html">CSS</a></li>
